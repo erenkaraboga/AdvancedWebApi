@@ -1,6 +1,9 @@
+﻿using NLog;
 using ProjectManagement.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
+LogManager.LoadConfiguration(String.Concat(Directory.GetCurrentDirectory(),"/nlog.config"));
+
 
 // Add services to the container.
 
