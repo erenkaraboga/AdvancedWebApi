@@ -1,4 +1,6 @@
-﻿using NLog;
+﻿using Contracts;
+using LoggerService;
+using NLog;
 using ProjectManagement.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -12,6 +14,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.ConfigureCors();
+builder.Services.ConfigureLoggerManager();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

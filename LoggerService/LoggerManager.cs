@@ -3,10 +3,10 @@ using NLog;
 
 namespace LoggerService
 {
-    public class LoggerService : ILoggerManager
+    public class LoggerManager : ILoggerManager
     {
         private static ILogger logger = LogManager.GetCurrentClassLogger();
-        public LoggerService()
+        public LoggerManager()
         {
 
         }
